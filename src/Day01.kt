@@ -14,7 +14,6 @@ fun main() {
 
     fun part2(input: List<String>): Int {
         var total = 0
-        val pattern = "(?=([0-9]|one|two|three|four|five|six|seven|eight|nine))".toRegex()
         val numberMap = mapOf(
             "one" to 1, "1" to 1,
             "two" to 2, "2" to 2,
