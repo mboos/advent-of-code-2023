@@ -64,8 +64,6 @@ fun findStart(start: String, firstNode: DirectionNode, navigationMap: MutableMap
     //     zCount += if (slow.first.last() == 'Z') 1 else 0
     // }
 
-    // println("${steps} ${loopSize} ${zCount}")
-
     return steps
 }
 
@@ -74,12 +72,10 @@ fun gcd(a: Long, b: Long): Long {
     var bb = b
     var t: Long
     while (bb != 0.toLong()) {
-        //println("${aa} ${bb}")
         t = bb
         bb = aa % bb
         aa = t
     }
-    //println("${a} ${b} ${aa}")
     return aa
 }
 
@@ -88,7 +84,6 @@ fun lcm(a: Long, b: Long): Long {
 }
 
 fun lcm(numbers: List<Long>): Long {
-    //println(numbers)
     if (numbers.size == 1) {
         return numbers[0]
     } else if (numbers.size == 2) {
