@@ -74,12 +74,12 @@ fun gcd(a: Long, b: Long): Long {
     var bb = b
     var t: Long
     while (bb != 0.toLong()) {
-        println("${aa} ${bb}")
+        //println("${aa} ${bb}")
         t = bb
         bb = aa % bb
         aa = t
     }
-    println("${a} ${b} ${aa}")
+    //println("${a} ${b} ${aa}")
     return aa
 }
 
@@ -88,7 +88,7 @@ fun lcm(a: Long, b: Long): Long {
 }
 
 fun lcm(numbers: List<Long>): Long {
-    println(numbers)
+    //println(numbers)
     if (numbers.size == 1) {
         return numbers[0]
     } else if (numbers.size == 2) {
@@ -120,7 +120,6 @@ fun main() {
     fun part2(input: List<String>): Long {
         val (firstNode, navigationMap) = loadInput(input)
 
-        var current = firstNode
         var (locations, _) = navigationMap.keys.partition { it.last() == 'A' }
 
         val loopSizes = locations.map { findStart(it, firstNode, navigationMap).toLong() }
@@ -130,7 +129,6 @@ fun main() {
 
     // test if implementation meets criteria from the description, like:
     val testInput = readInput("Day08_test")
-    val testInput2 = readInput("Day08_testb")
     check(part1(testInput) == 2)
     //check(part2(testInput2) == 6)
 
