@@ -10,7 +10,7 @@ sourceSets {
 }
 
 application {
-    mainClass.set("Day21Kt")
+    mainClass.set("Day22Kt")
 }
 
 tasks {
